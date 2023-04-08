@@ -1,0 +1,28 @@
+#errors_successes{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}
+ 
+@media only screen and (max-width: 575px)
+{
+    .errors_successes, 
+    #errors_successes {
+        position: fixed;
+        top: 89px;
+        width: 100%;
+        z-index: 999;
+    }
+}
+
+@media only screen and (max-width: 400px)
+{
+    .errors_successes, 
+    #errors_successes {
+        position: fixed;
+        top: 89px;
+        width: 100%;
+        z-index: 999;
+    }
+}
