@@ -18,6 +18,8 @@
     <link href="{{ asset('/css/universal.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/responsive.css') }}">
 
+    @vite(['resources/js/app.js'])
+
     @yield('stylesheets')
 
     <title>{{ $title }}</title>
