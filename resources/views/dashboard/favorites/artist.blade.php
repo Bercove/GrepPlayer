@@ -12,11 +12,7 @@
                     </div>
                 </div>
                 <div class="iq-card-body">
-                    <ul class="list-unstyled row iq-box-hover mb-0">  
-                        <div id="appVue">
-                        <favorite-artist></favorite-artist>   
-                    </div>
-
+                    <ul class="list-unstyled row iq-box-hover mb-0">   
                         {{-- @foreach($artists as $artist)
                             
                             <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">

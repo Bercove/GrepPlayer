@@ -74,12 +74,14 @@ class SearchController extends Controller
 
             $albumData = $this->album($searchQuery);
             $artistData = $this->artist($searchQuery);
+
             // dd(json_decode(json_encode($albumData->results->albummatches->album[0]->image[0]), true));
             // dd(json_decode(json_encode($artistData->results->artistmatches->artist[0]->image[0]), true));
+
             return view('dashboard.searches.show', [
                 'title' => 'Search :: '.$searchQuery.config('setup._SITE_TITLE'),
-                'albums' => $albumData->results->albummatches->album,
-                'artists' => $artistData->results->artistmatches->artist,
+                'albums' => $albumData?->results?->albummatches?->album,
+                'artists' => $artistData?->results?->artistmatches?->artist,
             ]);
         }
 

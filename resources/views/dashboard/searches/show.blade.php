@@ -15,6 +15,7 @@
                 <div class="iq-card-body">
                     <ul class="list-unstyled row iq-box-hover mb-0">
 
+                        @if ($albums)
                         @foreach($albums as $album) 
 
                             <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
@@ -46,6 +47,7 @@
                             </li>
 
                        @endforeach
+                       @endif
 
                     </ul>
                  </div>
@@ -61,7 +63,8 @@
                     </div>
                 </div>
                 <div class="iq-card-body">
-                    <ul class="list-unstyled row iq-box-hover mb-0">           
+                    <ul class="list-unstyled row iq-box-hover mb-0">  
+                        @if ($artists)      
                         @foreach($artists as $artist)
                             
                             <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
@@ -88,6 +91,7 @@
 
                                         <div class="feature-list text-center">
                                             <p class="mb-0">{{ $artist->name }}</p>
+                                            <favorite-artist name="{{ $artist->name }}"></favorite-artist> 
                                         </div>
 
                                     </div>
@@ -95,6 +99,7 @@
                             </li>
 
                         @endforeach
+                        @endif   
 
                     </ul>
                 </div>
