@@ -41,6 +41,7 @@
                                         <div class="feature-list text-center">
                                             <h6 class="font-weight-600 mb-0">{{ $album->name }}</h6>
                                             <p class="mb-0">{{ $album->artist }}</p>
+                                            <save-favorite-album name="{{ $album->name }}" artist="{{ $album->artist }}" image="{{ $image['#text'] }}"></save-favorite-album>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +92,7 @@
 
                                         <div class="feature-list text-center">
                                             <p class="mb-0">{{ $artist->name }}</p>
-                                            <favorite-artist name="{{ $artist->name }}"></favorite-artist> 
+                                            <save-favorite-artist name="{{ $artist->name }}"></save-favorite-artist> 
                                         </div>
 
                                     </div>

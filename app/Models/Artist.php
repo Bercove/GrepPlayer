@@ -12,7 +12,7 @@ class Artist extends Model
 
     protected $fillable = [
         'user',
-        'artist',
+        'name',
     ];
 
     /**

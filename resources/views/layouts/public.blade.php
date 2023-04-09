@@ -18,6 +18,15 @@
     <link href="{{ asset('/css/universal.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/responsive.css') }}">
 
+    <script>
+        window.csrf = "{{ csrf_token() }}";
+        @if(Auth::user())
+            window.user = {"name":"{{ Auth::user()->name }}","email":"{{ Auth::user()->email }}", "id":"{{ Auth::user()->id }}"};
+        @else
+            window.user = {"name":"","email":"", "id":""};
+        @endif
+    </script>
+
     @vite(['resources/js/app.js'])
 
     @yield('stylesheets')

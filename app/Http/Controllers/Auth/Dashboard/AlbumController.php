@@ -94,6 +94,26 @@ class AlbumController extends Controller
     public function store(Request $request)
     {
         //
+        $userId = $request->userId;
+        $name = $request->name;
+        $artist = $request->artist;
+        $image = $request->image;
+
+        Album::updateOrCreate(
+        [
+            'name' => $name
+        ],
+        [
+            'user' => $userId,
+            'name' => $name,
+            'artist' => $artist,
+            'image' => $image,
+        ]);
+
+        return response()->json([
+            "status" => "true",
+            "message" => "Favorite album saved successfully"
+        ], 200);
     }
 
     /**
@@ -111,13 +131,20 @@ class AlbumController extends Controller
         if(!is_null($this->user))
             return view('dashboard.favorites.album', [
                 'title' => 'Favorite :: Album'.config('setup._SITE_TITLE'),
-                'artists' => '$artistData->results->artistmatches->artist',
             ]);
         else
             return back()
                 ->with('errors', [
                     'OOPS :: User not found'
                 ]);
+    }
+
+    public function getFavoriteAlbum()
+    {
+        if(!is_null($this->user)){
+            $albums = Album::where('user', $this->userId)->orderByDesc('id')->get();
+            return response()->json($albums);
+        }
     }
 
     /**
@@ -131,8 +158,24 @@ class AlbumController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
         //
+        $userId = $request->userId;
+        $albumId = $request->albumId;
+
+        $delete = Album::where([
+            ['id', $albumId],
+            ['user', $userId]
+        ])->delete();
+
+        if($delete)
+            return response()->json([
+                'status' => 200,
+            ]);
+        else
+            return response()->json([
+                'status' => 'Unknown status',
+            ]);  
     }
 }

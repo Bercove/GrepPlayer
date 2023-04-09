@@ -17,7 +17,7 @@ return new class extends Migration
             $table->bigInteger('user')->unsigned()->nullable();
             $table->foreign('user')->references('id')->on('users');
 
-            $table->string('artist')->nullable();
+            $table->string('name')->nullable();
 
             $table->timestamps();
         });

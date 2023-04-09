@@ -93,6 +93,22 @@ class ArtistController extends Controller
     public function store(Request $request)
     {
         //
+        $userId = $request->userId;
+        $name = $request->name;
+
+        Artist::updateOrCreate(
+        [
+            'name' => $name
+        ],
+        [
+            'user' => $userId,
+            'name' => $name,
+        ]);
+
+        return response()->json([
+            "status" => "true",
+            "message" => "Favorite artist saved successfully"
+        ], 200);
     }
 
     /**
@@ -110,13 +126,20 @@ class ArtistController extends Controller
         if(!is_null($this->user))
             return view('dashboard.favorites.artist', [
                 'title' => 'Favorites :: Artist'.config('setup._SITE_TITLE'),
-                'artists' => '$artistData->results->artistmatches->artist',
             ]);
         else
             return back()
                 ->with('errors', [
                     'OOPS :: User not found'
                 ]);
+    }
+
+    public function getFavoriteArtist()
+    {
+        if(!is_null($this->user)){
+            $artists = Artist::where('user', $this->userId)->orderByDesc('id')->get();
+            return response()->json($artists);
+        }
     }
 
     /**
@@ -130,8 +153,24 @@ class ArtistController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
         //
+        $userId = $request->userId;
+        $artistId = $request->artistId;
+
+        $delete = Artist::where([
+            ['id', $artistId],
+            ['user', $userId]
+        ])->delete();
+
+        if($delete)
+            return response()->json([
+                'status' => 200,
+            ]);
+        else
+            return response()->json([
+                'status' => 'Unknown status',
+            ]);  
     }
 }

@@ -73,6 +73,30 @@ Route::name('dashboard.')->prefix('dashboard/')->middleware(['auth'])->group(fun
             Route::get('', [
                 ArtistController::class, 'show'
             ])->name('show');
+            Route::get('favorite', [
+                ArtistController::class, 'getFavoriteArtist'
+            ])->name('favorite');
+            Route::post('favorite', [
+                ArtistController::class, 'store'
+            ])->name('save');
+            Route::post('favorite/destroy', [
+                ArtistController::class, 'destroy'
+            ])->name('destroy');
+        });
+
+        Route::name('album.')->prefix('album/')->group(function () {
+            Route::get('', [
+                AlbumController::class, 'show'
+            ])->name('show');
+            Route::get('favorite', [
+                AlbumController::class, 'getFavoriteAlbum'
+            ])->name('favorite');
+            Route::post('favorite', [
+                AlbumController::class, 'store'
+            ])->name('save');
+            Route::post('favorite/destroy', [
+                AlbumController::class, 'destroy'
+            ])->name('destroy');
         });
 
         Route::name('album.')->prefix('album/')->group(function () {
