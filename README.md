@@ -1,56 +1,56 @@
 ## Grep Player
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The goal of this challenge is to build a web application that allows users to
+search and view information about music artists and their albums. The
+application should have the following features:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- User authentication: users should be able to sign up, login, and logout
+using their Google account.
+- Artist search: users should be able to search for artists by name and view
+their basic information, including their top tracks, albums, and related
+artists.
+- Album search: users should be able to search for albums by name and view
+their basic information, including the artist, release date, and track list.
+- Favourite artists and albums: logged-in users should be able to save their
+favourite artists and albums to their profile and view them later. All CRUD
+functionalities should be implemented respectively.
+- User interface: the user interface should be intuitive and user-friendly,
+allowing users to perform all of the above sections with ease. You can
+choose to use either ReactJS or VueJS for the frontend.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Instructions
 
-## Learning Laravel
+- Create a new Laravel project and set up Google user authentication
+- Integrate the last.fm API to allow for artist and album searches. (API
+documentation can be found at [Last FM API](https://www.last.fm/api))
+- Implement the artist and album search functionalities using Laravel’s built-
+in controllers and resource routes. All CRUD functionalities should be
+implemented respectively.
+- Implement the ability for logged-in users to save their favorite artists and
+albums to their profile using Laravel’s built-in authentication system. All
+CRUD functionalities should be implemented respectively.
+- Implement the user interface using either ReactJS or VueJS.
+- Dockerize your project.
+- Push your project to your Git and make the repository public.
+- Test the application thoroughly to ensure all the features work as
+expected.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Evaluation Criteria
+- Proper integration of the Google Sign-in API to allow user authentication.
+- Proper integration of the last.fm API to allow for artist and album searches.
+- Proper implementation of the artist and album functionalities using
+Laravel’s built-in controllers and resource routes.
+- Proper implementation of the ability for logged-in users to save their
+favorite artists and albums to their profile using Laravel’s built-in
+authentication system. Users should be able to add, edit, and delete their
+favorite artists and albums.
+- Intuitive and user-friendly interface.
+- Code quality and readability.
+- Proper documentation and commenting in the source code.
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Grep Player, please send an e-mail to **Bercove** via [bercove@gmail.com](mailto:bercove@gmail.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
