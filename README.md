@@ -1,4 +1,4 @@
-## Grep Player
+# <center>Grep Player</center>
 
 The goal of this challenge is to build a web application that allows users to
 search and view information about music artists and their albums. The
@@ -11,8 +11,8 @@ their basic information, including their top tracks, albums, and related
 artists.
 - Album search: users should be able to search for albums by name and view
 their basic information, including the artist, release date, and track list.
-- Favourite artists and albums: logged-in users should be able to save their
-favourite artists and albums to their profile and view them later. All CRUD
+- Favorite artists and albums: logged-in users should be able to save their
+favorite artists and albums to their profile and view them later. All CRUD
 functionalities should be implemented respectively.
 - User interface: the user interface should be intuitive and user-friendly,
 allowing users to perform all of the above sections with ease. You can
@@ -55,3 +55,49 @@ If you discover a security vulnerability within Grep Player, please send an e-ma
 ## License
 
 For open source projects, say how it is licensed. [NONE license](https://github.com/Bercove/GrepPlayer.git).
+
+# <center>How to Run Project</center>
+1. Clone Project 
+2. Open Terminal or CMD and navigate to root project
+3. Create **MySQL Database** `grepplayer`
+4. Use the following command to run project
+```
+php artisan migrate
+php artisan run serve
+```
+5. Open your browser and navigate to `Localhost` [http://localhost:8000](http://localhost:8000)
+
+# <center>Screenshot</center>
+![Login Form](public/screenshot/1.png)
+<center>Login Form</center>
+
+![Personal Information](public/screenshot/2.png)
+<center>Personal Information</center>
+
+![User Drop Down](public/screenshot/3.png)
+<center>User Drop Down</center>
+
+![User Profile](public/screenshot/4.png)
+<center>User Profile</center>
+
+![Search result for album](public/screenshot/5.png)
+<center>Search result for album</center>
+
+![Search result for artist](public/screenshot/6.png)
+<center>Search result for artist</center>
+
+![Saved Favorite Artist](public/screenshot/7.png)
+<center>Saved Favorite Artist</center>
+
+![Deletion of favorite Artist](public/screenshot/8.png)
+<center>Deletion of favorite Artist</center>
+
+![Saved Favorite Album](public/screenshot/9.png)
+<center>Saved Favorite Album</center>
+
+![Deletion of favorite Album](public/screenshot/10.png)
+<center>Deletion of favorite Album</center>
+
+![Searching for Artist and Album](public/screenshot/11.png)
+$$Searching for Artist and Album$$
+Use search bar for searching artist and album where it indicate one (1) and the result for Album will appear on two (2) and for Artist will appear on three (3).
