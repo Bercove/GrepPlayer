@@ -81,31 +81,9 @@
                             <h4 class="card-title">Favorite Albums</h4>
                         </div>
                         <div id="feature-album-slick-arrow" class="slick-aerrow-block"></div>
-                        </div>
+                    </div>
                     <div class="iq-card-body">
-                        <ul class="list-unstyled row iq-box-hover mb-0">
-                           <li class="col-xl-2 col-lg-3 col-md-4 iq-music-box">
-                                <div class="iq-card">
-                                    <div class="iq-card-body p-0">
-                                        <div class="iq-thumb">
-                                        <div class="iq-music-overlay"></div>
-                                        <a href="music-player.html">
-                                            <img src="images/dashboard/top-song/01.png" class="img-border-radius img-fluid w-100" alt="">
-                                        </a>
-                                        <div class="overlay-music-icon">
-                                            <a href="music-player.html">
-                                                <i class="las la-play-circle"></i>
-                                            </a>
-                                        </div>
-                                        </div>
-                                        <div class="feature-list text-center">
-                                        <h6 class="font-weight-600 mb-0">Enjoy Yourself</h6>
-                                        <p class="mb-0">cupcakKe </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                        <get-favorite-album></get-favorite-album>
                     </div>
                 </div>
             </div>
@@ -118,24 +96,7 @@
                         <div id="feature-album-artist-slick-arrow" class="slick-aerrow-block"></div>
                     </div>
                     <div class="iq-card-body">
-                        <ul class="list-unstyled row iq-box-hover mb-0">
-                            <li class="col-lg-2 iq-music-box mb-0">
-                                <div class="iq-thumb-artist">
-                                    <div class="iq-music-overlay"></div>
-                                    <a href ="music-player.html">
-                                        <img src="images/dashboard/feature-album-artist/01.png" class="w-100 img-fluid" alt="">
-                                    </a>
-                                    <div class="overlay-music-icon">
-                                        <a href ="music-player.html">
-                                            <i class="las la-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="feature-list text-center">
-                                    <h6 class="font-weight-600  mb-0">Pixie Lott</h6>
-                                </div>
-                            </li>
-                        </ul>
+                        <get-favorite-artist></get-favorite-artist>
                     </div>
                 </div>
             </div>

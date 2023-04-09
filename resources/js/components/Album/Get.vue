@@ -8,7 +8,7 @@
                     <div class="iq-thumb">
                         <div class="iq-music-overlay"></div>
                         <a href="javascript:;">
-                            <img v-bind:src="album.image" class="img-border-radius img-fluid w-100" alt="{{ album.name }}">
+                            <img v-bind:src="album.image" class="img-border-radius img-fluid w-100" v-bind:alt="album.name">
                         </a>
                         <div class="overlay-music-icon">
                             <a href="javascript:;">

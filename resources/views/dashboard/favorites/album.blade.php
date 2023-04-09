@@ -14,7 +14,7 @@
 
                 <div class="iq-card-body">
                     <get-favorite-album></get-favorite-album>
-                 </div>
+                </div>
 
             </div>
         </div>
