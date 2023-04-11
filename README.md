@@ -99,5 +99,5 @@ php artisan run serve
 <center>Deletion of favorite Album</center>
 
 ![Searching for Artist and Album](public/screenshot/11.png)
-$$Searching for Artist and Album$$
+<center>Searching for Artist and Album</center>
 Use search bar for searching artist and album where it indicate one (1) and the result for Album will appear on two (2) and for Artist will appear on three (3).
